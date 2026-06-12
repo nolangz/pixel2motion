@@ -7,7 +7,10 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SOURCE_HTML = resolve(ROOT, "docs/index.html");
-const OUT_DIR = resolve(ROOT, "outputs/videos/claude_4k120");
+const TRANSPARENT_MOV = process.argv.includes("--transparent-mov");
+const TRANSPARENT = process.argv.includes("--transparent") || TRANSPARENT_MOV;
+const KEEP_FRAMES = process.argv.includes("--keep-frames");
+const OUT_DIR = resolve(ROOT, TRANSPARENT ? "outputs/videos/claude_4k120_transparent" : "outputs/videos/claude_4k120");
 const HTML_DIR = resolve(OUT_DIR, "html");
 const FRAMES_DIR = resolve(OUT_DIR, "frames");
 const FPS = 120;
@@ -159,7 +162,7 @@ async function launchChrome() {
     screenHeight: HEIGHT,
   });
   await client.send("Emulation.setDefaultBackgroundColorOverride", {
-    color: { r: 255, g: 255, b: 255, a: 1 },
+    color: TRANSPARENT ? { r: 0, g: 0, b: 0, a: 0 } : { r: 255, g: 255, b: 255, a: 1 },
   });
 
   return { client, chrome, profileDir };
@@ -394,12 +397,41 @@ async function screenshot(client, framePath) {
     format: "png",
     fromSurface: true,
     captureBeyondViewport: false,
+    omitBackground: TRANSPARENT,
   });
   writeFileSync(framePath, Buffer.from(shot.data, "base64"));
 }
 
 async function encodeVideo(framesPattern, outputPath) {
-  await run("ffmpeg", [
+  const args = TRANSPARENT_MOV ? [
+    "-y",
+    "-hide_banner",
+    "-loglevel", "error",
+    "-framerate", String(FPS),
+    "-i", framesPattern,
+    "-vf", `scale=${WIDTH}:${HEIGHT}:flags=lanczos,setsar=1`,
+    "-c:v", "qtrle",
+    "-pix_fmt", "argb",
+    "-r", String(FPS),
+    outputPath,
+  ] : TRANSPARENT ? [
+    "-y",
+    "-hide_banner",
+    "-loglevel", "error",
+    "-framerate", String(FPS),
+    "-i", framesPattern,
+    "-vf", `scale=${WIDTH}:${HEIGHT}:flags=lanczos,setsar=1`,
+    "-c:v", "libvpx-vp9",
+    "-pix_fmt", "yuva420p",
+    "-auto-alt-ref", "0",
+    "-b:v", "0",
+    "-crf", "18",
+    "-deadline", "good",
+    "-cpu-used", "4",
+    "-row-mt", "1",
+    "-r", String(FPS),
+    outputPath,
+  ] : [
     "-y",
     "-hide_banner",
     "-loglevel", "error",
@@ -413,7 +445,8 @@ async function encodeVideo(framesPattern, outputPath) {
     "-r", String(FPS),
     "-movflags", "+faststart",
     outputPath,
-  ]);
+  ];
+  await run("ffmpeg", args);
 }
 
 async function ffprobe(outputPath) {
@@ -486,7 +519,12 @@ async function main() {
         }
       }
 
-      const outputPath = resolve(OUT_DIR, `${target.slug}_claude_4k_120fps.mp4`);
+      const outputPath = resolve(
+        OUT_DIR,
+        TRANSPARENT
+          ? `${target.slug}_claude_4k_120fps_transparent.${TRANSPARENT_MOV ? "mov" : "webm"}`
+          : `${target.slug}_claude_4k_120fps.mp4`
+      );
       await encodeVideo(resolve(frameDir, "frame_%06d.png"), outputPath);
       const stream = await ffprobe(outputPath);
       metadata.push({
@@ -505,6 +543,9 @@ async function main() {
         ffprobe: stream,
       });
       console.log(`  encoded -> ${outputPath}`);
+      if (!KEEP_FRAMES) {
+        rmSync(frameDir, { recursive: true, force: true });
+      }
     }
   } finally {
     client.close();
