@@ -4,21 +4,51 @@ Raster logo -> smooth SVG -> choreographed HTML motion.
 
 Pixel2Motion is a Codex skill for turning raster logos into clean, minimal vectors and then into branded motion systems. It fits the source with the lowest-complexity geometry that passes overlay QA, structures the SVG into named animation actors, and ships dependency-free HTML motion with browser evidence.
 
-## Motion Gallery
+## Pixel To Motion Gallery
 
-Claude motion set rendered from `docs/index.html` at each animation's default speed: Horizon 1900ms, Continuum 2000ms, Focus 1700ms, N 2400ms, plus CueRecord at the page-default 0.65x custom timeline.
+Pixel source images paired with Claude motion outputs rendered from `docs/index.html` at each animation's default speed: Horizon 1900ms, Continuum 2000ms, Focus 1700ms, N 2400ms, plus CueRecord at the page-default 0.65x custom timeline.
 
 <table>
   <tr>
-    <td align="center" width="50%"><strong>Horizon</strong><br><img src="docs/gifs/claude-horizon.gif" width="320" alt="Claude Horizon logo motion preview"></td>
-    <td align="center" width="50%"><strong>Continuum</strong><br><img src="docs/gifs/claude-continuum.gif" width="320" alt="Claude Continuum logo motion preview"></td>
+    <td align="center" width="50%">
+      <strong>Horizon</strong><br>
+      <sub>Pixel source</sub><br>
+      <img src="docs/pixels/horizon-pixel.png" width="260" alt="Horizon pixel source logo"><br>
+      <sub>Motion output</sub><br>
+      <img src="docs/gifs/claude-horizon.gif" width="320" alt="Claude Horizon logo motion preview">
+    </td>
+    <td align="center" width="50%">
+      <strong>Continuum</strong><br>
+      <sub>Pixel source</sub><br>
+      <img src="docs/pixels/continuum-pixel.png" width="260" alt="Continuum pixel source logo"><br>
+      <sub>Motion output</sub><br>
+      <img src="docs/gifs/claude-continuum.gif" width="320" alt="Claude Continuum logo motion preview">
+    </td>
   </tr>
   <tr>
-    <td align="center" width="50%"><strong>Focus</strong><br><img src="docs/gifs/claude-focus.gif" width="320" alt="Claude Focus logo motion preview"></td>
-    <td align="center" width="50%"><strong>CueRecord</strong><br><img src="docs/gifs/claude-cuerecord.gif" width="320" alt="Claude CueRecord logo motion preview"></td>
+    <td align="center" width="50%">
+      <strong>Focus</strong><br>
+      <sub>Pixel source</sub><br>
+      <img src="docs/pixels/focus-pixel.png" width="260" alt="Focus pixel source logo"><br>
+      <sub>Motion output</sub><br>
+      <img src="docs/gifs/claude-focus.gif" width="320" alt="Claude Focus logo motion preview">
+    </td>
+    <td align="center" width="50%">
+      <strong>CueRecord</strong><br>
+      <sub>Pixel source</sub><br>
+      <img src="docs/pixels/cuerecord-pixel.jpg" width="300" alt="CueRecord pixel source logo"><br>
+      <sub>Motion output</sub><br>
+      <img src="docs/gifs/claude-cuerecord.gif" width="320" alt="Claude CueRecord logo motion preview">
+    </td>
   </tr>
   <tr>
-    <td align="center" width="50%"><strong>N</strong><br><img src="docs/gifs/claude-n.gif" width="320" alt="Claude N logo motion preview"></td>
+    <td align="center" width="50%">
+      <strong>N</strong><br>
+      <sub>Pixel source</sub><br>
+      <img src="docs/pixels/n-pixel.png" width="320" alt="N pixel source logo"><br>
+      <sub>Motion output</sub><br>
+      <img src="docs/gifs/claude-n.gif" width="320" alt="Claude N logo motion preview">
+    </td>
     <td align="center" width="50%"></td>
   </tr>
 </table>
