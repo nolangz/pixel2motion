@@ -2,7 +2,7 @@
 
 **Raster logo → smooth minimal SVG → choreographed HTML motion.**
 
-[Live interactive demo](https://nolanlai.github.io/pixel2motion/) · [Skill instructions](https://github.com/nolangz/pixel2motion/blob/main/SKILL.md) · [Companion skill: Pixel2SVG-HTML](https://github.com/nolangz/pixel2svg-html)
+[Live interactive demo](https://nolangz.github.io/pixel2motion/) · [Skill instructions](https://github.com/nolangz/pixel2motion/blob/main/SKILL.md) · [Companion skill: Pixel2SVG-HTML](https://github.com/nolangz/pixel2svg-html)
 
 Pixel2Motion is a Codex skill for turning raster logos into clean, minimal vectors and then into branded motion systems. It fits the source with the lowest-complexity geometry that passes overlay QA, structures the SVG into named animation actors, and ships dependency-free HTML motion with browser-rendered evidence, applying Disney's 12 principles of animation throughout.
 
@@ -59,9 +59,9 @@ Each pairing shows the raster source next to the motion output, rendered from `d
 
 ## Interactive Demo
 
-[![Pixel2Motion project preview](docs/preview.png)](https://nolanlai.github.io/pixel2motion/)
+[![Pixel2Motion project preview](docs/preview.png)](https://nolangz.github.io/pixel2motion/)
 
-The full interactive showcase lives in `docs/index.html` and is intended to publish through GitHub Pages at `https://nolanlai.github.io/pixel2motion/`.
+The full interactive showcase lives in `docs/index.html` and is published through GitHub Pages at `https://nolangz.github.io/pixel2motion/`.
 
 ## Fitting Evidence
 
