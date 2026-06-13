@@ -40,6 +40,46 @@
       background: transparent;
     }
 
+    .site-nav {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 100;
+      display: flex;
+      justify-content: flex-end;
+      pointer-events: none;
+    }
+
+    .repo-entry {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 16px;
+      border: 1px solid rgba(0,0,0,0.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.82);
+      color: var(--text-primary);
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .repo-entry:hover {
+      border-color: rgba(0,0,0,0.28);
+      background: rgba(255,255,255,0.94);
+    }
+
+    .repo-entry:focus-visible {
+      outline: 3px solid rgba(230,64,54,0.36);
+      outline-offset: 3px;
+    }
+
     /* ---- hero: full claude_horizon page ---- */
     .hero-frame {
       height: 100vh;
@@ -259,6 +299,8 @@
     }
 
     @media (max-width: 860px) {
+      .site-nav { top: 12px; right: 12px; }
+      .repo-entry { min-height: 36px; padding: 0 14px; font-size: 12px; }
       .pair { grid-template-columns: 1fr; }
       .compare { padding: 0 16px 64px; }
       .pixel-stage { height: auto !important; }
@@ -268,6 +310,9 @@
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Project links">
+    <a class="repo-entry" href="https://github.com/nolangz/pixel2motion" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
   <iframe class="hero-frame" title="Horizon — full presentation" scrolling="no"
           srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
