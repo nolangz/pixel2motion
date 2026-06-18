@@ -190,9 +190,11 @@ git push -u origin main
 </p>
 
 <p align="center">
-  <img src="docs/community/vibe-creators-wechat-qr.jpg" width="360" alt="Vibe-Creators WeChat group QR code">
+  <img src="docs/community/vibe-creators-wechat-qr.jpg" width="360" alt="Nolanlai WeChat QR code for Vibe-Creators invite">
   <br>
   <strong>Vibe-Creators 交流</strong>
   <br>
-  Scan the QR code to join the creator community.
+  Vibe-Creators 群已满。扫码加我为好友，我邀请你进群。
+  <br>
+  The Vibe-Creators group is currently full. Scan the QR code to add me on WeChat, and I can invite you in.
 </p>
