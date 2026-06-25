@@ -16,6 +16,7 @@ const ENDPOINT = WAITLIST_SITE_HOSTS.has(window.location.hostname) ? "/api/waitl
   const input = form.querySelector('input[type="email"]');
   const button = form.querySelector('button[type="submit"]');
   const status = document.getElementById("form-status");
+  let isSubmitting = false;
 
   // translation helper (falls back to English if i18n isn't loaded)
   const tr = (key, fallback) => (window.t ? window.t(key) : fallback);
@@ -27,15 +28,20 @@ const ENDPOINT = WAITLIST_SITE_HOSTS.has(window.location.hostname) ? "/api/waitl
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
     const email = (input.value || "").trim();
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus(tr("status.invalid", "Please enter a valid email address."), "error");
+      input.setAttribute("aria-invalid", "true");
       input.focus();
       return;
     }
 
-    button.disabled = true;
+    isSubmitting = true;
+    form.setAttribute("aria-busy", "true");
+    input.setAttribute("aria-invalid", "false");
     const original = button.textContent;
     button.textContent = tr("status.joining", "Joining…");
     setStatus("", "");
@@ -54,7 +60,8 @@ const ENDPOINT = WAITLIST_SITE_HOSTS.has(window.location.hostname) ? "/api/waitl
       console.error(err);
       setStatus(tr("status.error", "Something went wrong. Please try again, or email hi@lykno.ai."), "error");
     } finally {
-      button.disabled = false;
+      isSubmitting = false;
+      form.removeAttribute("aria-busy");
       button.textContent = original;
     }
   });
