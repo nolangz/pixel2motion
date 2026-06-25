@@ -2,17 +2,17 @@
 
 **Raster logo → smooth minimal SVG → SVG logo animation → interactive HTML motion demo.**
 
-[Live interactive demo](https://nolangz.github.io/pixel2motion/) · [Skill instructions](https://github.com/nolangz/pixel2motion/blob/main/SKILL.md) · [Companion skill: Pixel2SVG-HTML](https://github.com/nolangz/pixel2svg-html)
+[Commercial waitlist](https://nolangz.github.io/pixel2motion/) · [Skill instructions](https://github.com/nolangz/pixel2motion/blob/main/SKILL.md) · [Companion skill: Pixel2SVG-HTML](https://github.com/nolangz/pixel2svg-html)
 
 Pixel2Motion is an open-source Codex and Claude skill for **logo animation**, **SVG animation**, and AI-assisted brand motion. It turns PNG, JPG, WebP, or screenshot logos into clean motion-ready SVG, then exports animated logo HTML, GIF/video previews, and motion QA evidence. Use it for animated logos, SVG logo reveals, logo motion design, pixel-to-vector reconstruction, and developer-friendly HTML animation workflows.
 
 中文：Pixel2Motion 是一个把像素 logo 转成平滑 SVG，再生成品牌 motion、logo reveal、HTML 动效展示和视频预览的 Codex skill。它适合需要可审查矢量拟合、可复用 SVG 结构和可导出动图/透明视频的设计与开发场景。
 
-Recommended review order: the motion gallery below, the interactive demo, the fitting evidence, and then the implementation workflow.
+Recommended review order: the motion gallery below, the commercial waitlist page, the fitting evidence, and then the implementation workflow.
 
 ## Pixel-to-Motion Gallery
 
-Each pairing shows the raster source next to the motion output, rendered from `docs/index.html` at the animation's default speed: Horizon 1900 ms, Continuum 2000 ms, Focus 1700 ms, N 2400 ms, and CueRecord at the page-default 0.65× custom timeline.
+Each pairing shows the raster source next to the motion output from the project gallery: Horizon 1900 ms, Continuum 2000 ms, Focus 1700 ms, N 2400 ms, and CueRecord at the page-default 0.65× custom timeline.
 
 <table>
   <tr>
@@ -59,11 +59,11 @@ Each pairing shows the raster source next to the motion output, rendered from `d
   </tr>
 </table>
 
-## Interactive Demo
+## Commercial Waitlist
 
 [![Pixel2Motion project preview](docs/preview.png)](https://nolangz.github.io/pixel2motion/)
 
-The full interactive showcase lives in `docs/index.html` and is published through GitHub Pages at `https://nolangz.github.io/pixel2motion/`.
+The public Pages site now hosts the commercial waitlist page at `docs/index.html`. A higher-quality paid Pixel2Motion site is being prepared for launch, and visitors can join the waitlist for early access.
 
 ## Fitting Evidence
 
@@ -190,11 +190,11 @@ git push -u origin main
 </p>
 
 <p align="center">
-  <img src="docs/community/vibe-creators-wechat-qr.jpg" width="360" alt="Nolanlai WeChat QR code for Vibe-Creators invite">
+  <img src="docs/community/vibe-creators-wechat-qr.jpg" width="360" alt="vibe-creators group QR code">
   <br>
-  <strong>Vibe-Creators 交流</strong>
+  <strong>扫码进群交流 vibe-creators群</strong>
   <br>
-  Vibe-Creators 群已满。扫码加我为好友，我邀请你进群。
+  扫码进群交流 vibe-creators群
   <br>
-  The Vibe-Creators group is currently full. Scan the QR code to add me on WeChat, and I can invite you in.
+  Scan the QR code to join the vibe-creators group.
 </p>
