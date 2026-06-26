@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.pixel2motion.com">
-    <img src="docs/community/pixel2motion-commercial-preview.png" width="560" alt="Pixel2Motion commercial service preview">
+    <img src="docs/community/pixel2motion-wordmark.png" width="520" alt="Pixel2Motion wordmark commercial service preview">
   </a>
   <br>
   <strong><a href="https://www.pixel2motion.com">www.pixel2motion.com</a></strong>
