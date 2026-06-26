@@ -1,14 +1,28 @@
+<p align="center">
+  <a href="https://www.pixel2motion.com">
+    <img src="docs/community/pixel2motion-commercial-preview.png" width="560" alt="Pixel2Motion commercial service preview">
+  </a>
+  <br>
+  <strong><a href="https://www.pixel2motion.com">www.pixel2motion.com</a></strong>
+  <br>
+  Better commercial Pixel2Motion services are coming online: polished logo-to-motion workflows, project-ready previews, and production support beyond the open-source skill.
+  <br>
+  中文：更完整的 Pixel2Motion 商业服务正在上线，面向更稳定的 logo-to-motion 交付、预览和项目支持。
+</p>
+
+---
+
 # Pixel2Motion - AI Logo Animation Skill
 
 **Raster logo → smooth minimal SVG → SVG logo animation → interactive HTML motion demo.**
 
-[Commercial waitlist](https://nolangz.github.io/pixel2motion/) · [Skill instructions](https://github.com/nolangz/pixel2motion/blob/main/SKILL.md) · [Companion skill: Pixel2SVG-HTML](https://github.com/nolangz/pixel2svg-html)
+[Commercial preview](https://www.pixel2motion.com) · [Live interactive demo](https://nolangz.github.io/pixel2motion/) · [Skill instructions](https://github.com/nolangz/pixel2motion/blob/main/SKILL.md) · [Companion skill: Pixel2SVG-HTML](https://github.com/nolangz/pixel2svg-html)
 
 Pixel2Motion is an open-source Codex and Claude skill for **logo animation**, **SVG animation**, and AI-assisted brand motion. It turns PNG, JPG, WebP, or screenshot logos into clean motion-ready SVG, then exports animated logo HTML, GIF/video previews, and motion QA evidence. Use it for animated logos, SVG logo reveals, logo motion design, pixel-to-vector reconstruction, and developer-friendly HTML animation workflows.
 
 中文：Pixel2Motion 是一个把像素 logo 转成平滑 SVG，再生成品牌 motion、logo reveal、HTML 动效展示和视频预览的 Codex skill。它适合需要可审查矢量拟合、可复用 SVG 结构和可导出动图/透明视频的设计与开发场景。
 
-Recommended review order: the motion gallery below, the commercial waitlist page, the fitting evidence, and then the implementation workflow.
+Recommended review order: the motion gallery below, the commercial preview, the fitting evidence, and then the implementation workflow.
 
 ## Pixel-to-Motion Gallery
 
@@ -59,11 +73,11 @@ Each pairing shows the raster source next to the motion output from the project 
   </tr>
 </table>
 
-## Commercial Waitlist
+## Commercial Preview
 
-[![Pixel2Motion project preview](docs/preview.png)](https://nolangz.github.io/pixel2motion/)
+[![Pixel2Motion project preview](docs/preview.png)](https://www.pixel2motion.com)
 
-The public Pages site now hosts the commercial waitlist page at `docs/index.html`. A higher-quality paid Pixel2Motion site is being prepared for launch, and visitors can join the waitlist for early access.
+The open-source demo remains available at [nolangz.github.io/pixel2motion](https://nolangz.github.io/pixel2motion/). A more polished commercial Pixel2Motion service is coming online at [www.pixel2motion.com](https://www.pixel2motion.com), with project-ready previews and production support beyond the open-source skill.
 
 ## Fitting Evidence
 
