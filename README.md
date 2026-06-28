@@ -212,3 +212,13 @@ git push -u origin main
   <br>
   Scan the QR code to join the vibe-creators group.
 </p>
+
+## Star History
+
+<p align="center">
+  <a href="https://www.star-history.com/#nolangz/pixel2motion&Date">
+    <img src="https://api.star-history.com/svg?repos=nolangz/pixel2motion&type=Date" width="720" alt="Pixel2Motion GitHub star history chart">
+  </a>
+  <br>
+  <sub>Classic hand-drawn growth curve for Pixel2Motion GitHub stars.</sub>
+</p>
