@@ -217,8 +217,8 @@ git push -u origin main
 
 <p align="center">
   <a href="https://www.star-history.com/#nolangz/pixel2motion&Date">
-    <img src="docs/community/pixel2motion-star-history.svg" width="720" alt="Pixel2Motion GitHub star history chart">
+    <img src="https://api.star-history.com/svg?repos=nolangz/pixel2motion&type=Date" width="720" alt="Pixel2Motion GitHub star history chart">
   </a>
   <br>
-  <sub>Stable local preview. Click the chart for the live Star History page.</sub>
+  <sub>Classic hand-drawn growth curve for Pixel2Motion GitHub stars.</sub>
 </p>
