@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Pixel2Motion star history</title>
+  <desc id="desc">Hand-drawn style GitHub star growth curve for Pixel2Motion, used as a stable README fallback when the live Star History API is rate-limited.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g font-family="'Comic Sans MS', 'Marker Felt', 'Chalkboard SE', cursive" fill="#101014">
+    <g transform="translate(610 100)">
+      <circle cx="-52" cy="4" r="21" fill="#101014"/>
+      <path d="M-61 12 L-44 -18" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="-48" cy="-20" r="3.5" fill="#fff"/>
+      <text x="-18" y="20" font-size="44" font-weight="700">Star History</text>
+    </g>
+
+    <path d="M145 724 C148 632 146 546 148 456 C150 348 148 248 151 163" fill="none" stroke="#101014" stroke-width="7" stroke-linecap="round"/>
+    <path d="M142 724 C252 721 349 725 458 722 C572 720 685 725 792 722 C934 719 1064 724 1218 722 C1327 720 1443 725 1512 722" fill="none" stroke="#101014" stroke-width="7" stroke-linecap="round"/>
+
+    <g font-size="32" font-weight="700">
+      <text x="78" y="732">0</text>
+      <text x="68" y="562">500</text>
+      <text x="62" y="392">1K</text>
+      <text x="48" y="222">1.5K</text>
+    </g>
+
+    <g font-size="30" font-weight="700">
+      <text x="128" y="777">Jun 12</text>
+      <text x="482" y="777">Jun 18</text>
+      <text x="840" y="777">Jun 24</text>
+      <text x="1362" y="777">Now</text>
+    </g>
+
+    <text x="40" y="463" transform="rotate(-90 40 463)" font-size="34" font-weight="700">GitHub Stars</text>
+    <text x="742" y="842" font-size="35" font-weight="700">Date</text>
+
+    <g transform="translate(168 170)">
+      <path d="M0 0 C5 -4 28 -6 43 -3 C56 -1 76 -1 94 -3 C118 -6 156 -2 184 -3 C211 -4 257 -2 301 -3 C318 -4 343 -3 359 -1 L359 56 C319 58 279 54 236 57 C199 59 161 56 123 57 C79 59 38 56 1 57 Z"
+        fill="none" stroke="#101014" stroke-width="5" stroke-linejoin="round"/>
+      <rect x="19" y="22" width="16" height="16" rx="3" fill="#e64a2e"/>
+      <text x="51" y="39" font-size="28" font-weight="700">nolangz/pixel2motion</text>
+    </g>
+
+    <path d="M150 724
+      C187 724 219 724 252 723
+      C286 722 314 722 345 716
+      C375 710 399 705 430 693
+      C458 682 482 675 512 657
+      C546 638 574 617 604 590
+      C637 560 661 525 694 488
+      C724 453 756 416 794 377
+      C828 340 863 305 902 271
+      C938 239 970 209 1008 187
+      C1048 165 1084 155 1121 151
+      C1158 147 1190 149 1228 141
+      C1264 134 1291 117 1327 104
+      C1364 91 1402 84 1440 73
+      C1468 65 1490 52 1518 38"
+      fill="none" stroke="#e64a2e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M150 724
+      C191 721 226 727 264 721
+      C303 718 337 716 376 709
+      C416 701 452 687 488 670
+      C522 653 555 633 590 600
+      C622 569 649 535 681 501
+      C718 461 755 420 795 379
+      C835 337 875 295 921 259
+      C965 224 1009 193 1053 170
+      C1097 148 1140 145 1179 145
+      C1221 145 1258 136 1296 119
+      C1337 101 1379 91 1419 78
+      C1452 67 1487 55 1518 38"
+      fill="none" stroke="#e64a2e" stroke-width="3" stroke-linecap="round" opacity="0.42"/>
+
+    <g transform="translate(1258 108) rotate(-6)">
+      <path d="M0 76 C38 30 84 13 139 0" fill="none" stroke="#101014" stroke-width="4" stroke-linecap="round"/>
+      <path d="M127 0 L142 0 L134 14" fill="none" stroke="#101014" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="-2" y="120" font-size="36" font-weight="700">1.5K+ stars</text>
+    </g>
+
+    <g transform="translate(1245 812)">
+      <path d="M38 0 L47 27 L75 27 L52 43 L60 70 L38 53 L16 70 L24 43 L1 27 L29 27 Z"
+        fill="none" stroke="#22c83b" stroke-width="5" stroke-linejoin="round"/>
+      <text x="92" y="51" font-size="32" fill="#777">star-history.com</text>
+    </g>
+  </g>
+</svg>
