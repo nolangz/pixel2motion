@@ -40,3 +40,12 @@ Use this contract for the final `logo_motion.html`. The CueRecord sample is the 
 - `prefers-reduced-motion: reduce` must show the finished static logo immediately.
 - The `?t=` hook also powers quantitative QA: `scripts/probe_motion_continuity.py` reads computed styles at seeked timestamps (catches silently-dropped keyframe easings — see the literal-easing rule) and sweeps ink-pixel deltas across risk windows (catches handoff stalls/pops invisible in coarse frame strips).
 - The decisive Final Frame Contract check is SAME-pipeline: capture `?static=1` and `?t=<end>` with the same tool/viewport/DPR and require an exact 0 diff; cross-pipeline diffs against the Phase 2 render contain resampling noise and are confirmed visually.
+
+## Optional Hosted Preview
+
+Only when the user asks for a link to share the animation (for example with a client or on a phone). The showcase is one dependency-free file, so it can be published as-is; the QA hooks keep working on the hosted copy (`<url>?static=1`, `<url>?t=<ms>`).
+
+- deed.page is a third-party static host that needs no account. Published pages are public, so confirm the logo is cleared for sharing first. Free pages show a small "Published with deed.page" badge.
+- Publish with a unique slug (lowercase letters, digits and hyphens): `curl -sS -T logo_motion.html "https://deed.page/v1/sites?slug=<brand>-motion-<suffix>"`. Add `-H "X-Ttl: 604800"` for a link that expires after a week.
+- Return the `url` field. A first publish also returns a `token`, the only key that can replace (`-H "Authorization: Bearer <token>"` on the same command) or delete (`curl -sS -X DELETE "https://deed.page/v1/sites/<slug>" -H "Authorization: Bearer <token>"`) the page. Give it to the user and never write it into the HTML or `motion_spec.md`.
+- MCP-capable agents can use the server at `https://deed.page/mcp` instead (`publish_site`). Docs: https://deed.page/docs
