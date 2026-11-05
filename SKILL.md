@@ -192,7 +192,7 @@ python3 scripts/probe_motion_continuity.py logo_motion.html \
 python3 scripts/probe_motion_continuity.py logo_motion.html --ink-sweep 850:1010:10
 ```
 
-Environment notes: Pillow/numpy via a venv when system Python is externally managed (`python3 -m venv .venv && .venv/bin/pip install pillow numpy`); geometry rendering uses headless Chrome (`CHROME_BIN` if needed), while motion frame capture requires Playwright or equivalent deterministic browser screenshot tooling.
+Environment notes: Pillow/numpy via a venv when system Python is externally managed (`python3 -m venv .venv && .venv/bin/pip install pillow numpy`); geometry rendering uses headless Chrome (`CHROME_BIN` if needed; on Windows Chrome, Edge and Playwright's headless shell are found automatically, and the commands run as `python`, with the venv in `.venv\Scripts\`), while motion frame capture requires Playwright or equivalent deterministic browser screenshot tooling.
 
 If Playwright is unavailable, use any real-browser screenshot tooling available in the environment with the same `?t=<ms>` URLs; wall-clock screenshots of a running animation are not acceptable evidence (non-deterministic).
 

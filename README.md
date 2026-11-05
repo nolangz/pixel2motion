@@ -169,6 +169,12 @@ If Chrome is not on the default path, set `CHROME_BIN` before running render che
 export CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 ```
 
+On Windows, run the commands with `python` instead of `python3`, and use `.venv\Scripts\pip` and `.venv\Scripts\python` for the venv. `render_overlay.py` looks for Chrome, then Edge, then the Playwright headless shell (`playwright install chromium` installs it) in their default locations, so `CHROME_BIN` is only needed for a browser installed somewhere else:
+
+```powershell
+$env:CHROME_BIN = "D:\Apps\Chrome\chrome.exe"
+```
+
 ## Repository Layout
 
 - `SKILL.md`: Codex-facing pixel-to-vector-to-motion workflow
